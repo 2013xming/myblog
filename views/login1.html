@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>123 </title>
+  <script type="text/javascript" src="../public/javascripts/jquery-1.11.2.min.js"></script>
+  <link href="../public/stylesheets/common.css" rel="stylesheet">
+
+  <style type="text/css">
+   
+  </style>
+</head>
+<body>
+<style type="text/css">
+	.form-login{
+		margin:150px auto 0px auto;
+		max-width: 300px;
+		font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+		padding: 15px;
+
+	}
+	input{
+		display: block;
+		width:100%;
+		height: 30px;
+		line-height: 16px;
+
+	}
+	input#username{
+
+		border-top-left-radius:4px;
+		border-top-right-radius: 4px; 
+	}
+	input#password{
+		margin-top:-1px;
+		border-bottom-left-radius:4px;
+		border-bottom-right-radius: 4px; 
+	}
+	.login-content{
+		min-height: 700px;
+	}
+	.btn-submit{
+		color: #fff;
+		margin-top: 10px;
+		background-color: #286090;
+		border-color: #204d74;
+		width:100%;
+		padding: 10px 16px;
+		font-size: 18px;
+		line-height: 1.3333333;
+		border-radius: 6px;
+	}
+</style>
+<div class="login-content">
+
+ 
+</div>
+<button id="submitButton" class="btn-submit">登录1</button>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#submitButton").click(submit);
+	function submit(){
+		var username = "aaa";
+		var password = "bbb";
+
+		$.ajax({
+			type:"POST",
+			url:"http://www.yuxiblog.cn/test",
+//			contentType:"application/json; charset=utf-8",
+			data:{username:username,password:password},
+			success:function(data){
+				alert("success");
+			},
+			error:function(err){
+				alert("err");
+			}
+		});
+	}
+});
+	
+</script>
+
+<footer>
+	<span>Designed by Yuxi</span>
+</footer>
+</body>
+<script>
+
+</script>
+</html>
